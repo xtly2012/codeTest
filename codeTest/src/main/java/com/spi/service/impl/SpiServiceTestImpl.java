@@ -8,6 +8,7 @@ public class SpiServiceTestImpl implements SpiServiceTest {
 	public String search(String keyword) {
 		StringBuffer strBuf = new StringBuffer("search data by keyword:");
 		strBuf.append(keyword);
+		System.out.println(strBuf.toString());
 		return strBuf.toString();
 	}
 
