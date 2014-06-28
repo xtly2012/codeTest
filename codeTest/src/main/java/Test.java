@@ -48,7 +48,7 @@ public class Test
 //        System.out.println("test1 = " +test1.getDate().getTime());
         
         Date date = new Date();
-        date.setTime(1380621467482L);
+        date.setTime(1382101936331L);
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         System.out.println(dateFormat.format(date));
 //
