@@ -6,10 +6,10 @@ public class ClassLoaderTest
     @SuppressWarnings("static-access")
     public static void main(String[] argus) throws ClassNotFoundException, InstantiationException, IllegalAccessException
     {
-        TempClassLoader loader = new TempClassLoader(null, "tempClassLoader");
+        TempClassLoader loader = new TempClassLoader("tempClassLoader");
         TempClassLoader loader1 = new TempClassLoader(loader, "tempClassLoader");
-        loader1.setPath("D:/workspace");
-        Thread.currentThread().setContextClassLoader(loader1);
+ //       loader1.setPath("/Users/chenfayong/workspace/codeTest/codeTest/build/classes/");
+       // Thread.currentThread().setContextClassLoader(loader1);
         
         System.out.println("tempClassLoader classLoader is " +loader1.getParent().toString());
         System.out.println("tempClassLoader systemClassLoader is " +loader1.getParent().getSystemClassLoader().toString());

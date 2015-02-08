@@ -12,7 +12,8 @@ public class TempClassLoader extends ClassLoader
     // 类加载器名称
     private String name;
     // 加载类的路径
-    private String path = "D:/";
+    // /Users/chenfayong/workspace/codeTest/codeTest/build/classes/com/classloader
+    private String path = "/Users/chenfayong/workspace/codeTest/codeTest/build/classes/";
     private final String fileType = ".class";
 
     public TempClassLoader(String name)
@@ -21,7 +22,6 @@ public class TempClassLoader extends ClassLoader
         super();
         this.name = name;
     }
-
     public TempClassLoader(ClassLoader parent, String name)
     {
         // 显示指定该类加载器的父加载器
@@ -56,8 +56,8 @@ public class TempClassLoader extends ClassLoader
         InputStream is = null;
         byte[] data = null;
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        this.name = this.name.replace(".", "/");
-        try
+        name = name.replace(".", "/");
+       try
         {
             is = new FileInputStream(new File(path + name + fileType));
             int c = 0;

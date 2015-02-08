@@ -47,24 +47,45 @@ public class Test
 //        System.out.println("test = " +test.getDate().getTime());
 //        System.out.println("test1 = " +test1.getDate().getTime());
         
-        Date date = new Date();
-        date.setTime(1382101936331L);
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        System.out.println(dateFormat.format(date));
+//        Date date = new Date();
+//        date.setTime(1382101936331L);
+//        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+//        System.out.println(dateFormat.format(date));
 //
-        
+//    	Short page = null;
+//        short result = (short)page;
+    	
+//    	String a = "adfasdfasdf";
+//    	String b = "adfasdfasdf";
+//    	System.out.println(a == b);
+    	DateTest test = new DateTest();
+    	int i = 0;
+    	System.out.println(test.getState() == i);
     }
     
     
 }
 
+/**
+ * @author chenfayong
+ *
+ */
 class DateTest implements Cloneable, Serializable
 {
 
     private static final long serialVersionUID = -860113338612676477L;
     Date date = null;
+    Short state = null;
 
-    public Date getDate()
+    public Short getState() {
+		return state;
+	}
+
+	public void setState(Short state) {
+		this.state = state;
+	}
+
+	public Date getDate()
     {
         return date;
     }
