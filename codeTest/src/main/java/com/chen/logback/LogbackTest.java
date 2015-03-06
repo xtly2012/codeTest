@@ -10,5 +10,6 @@ public class LogbackTest
     {
         Logger logger = LoggerFactory.getLogger(LogbackTest.class);
         logger.warn("hello world");
+        logger.info("hello java world");
     }
 }
