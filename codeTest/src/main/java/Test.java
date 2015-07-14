@@ -3,6 +3,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -58,9 +59,12 @@ public class Test
 //    	String a = "adfasdfasdf";
 //    	String b = "adfasdfasdf";
 //    	System.out.println(a == b);
-    	DateTest test = new DateTest();
-    	int i = 0;
-    	System.out.println(test.getState() == i);
+//    	DateTest test = new DateTest();
+//    	int i = 0;
+//    	System.out.println(test.getState() == i);
+    	
+    	BigDecimal test5 = new BigDecimal("1103.5");
+    	System.out.println(test5.setScale(-1,BigDecimal.ROUND_DOWN));
     }
     
     
